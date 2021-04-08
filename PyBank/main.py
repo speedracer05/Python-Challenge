@@ -46,7 +46,7 @@ for r in range(0, len(rev)-1): # <-1> subtract one row for the header
     # Note: manual validation for 1st calc (984655-867884 = 116771) checks 
     # out with print results.
     rev_change.append(int(rev[r+1]) - int(rev[r]))
-    print(rev_change)
+    # print(rev_change)
 
 # forLoop in the list rev_change, from zero to the end of items in rev_change
 for c in range(0, len(rev_change)):
@@ -71,6 +71,10 @@ for c in range(0, len(rev_change)):
 AvgChange = int(sum_change/(len(rev_change)-1))
 
 # Analysis print via Terminal
+print("")
+print("PyBank Financial Analysis")
+print("**************************")
 print("Total Months: " + str(len(date)))
-print("Total Revenue: " + str(total_rev))
-print("Average Revenue Change " + str(AvgChange))
+print("Total Revenue: " + "$" + str(total_rev) + "")
+print("Average Revenue Change $" + str(AvgChange))
+print("Greatest Increase in Profit: " + " ($" + str(rev_gain) + ")")
