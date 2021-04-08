@@ -60,7 +60,7 @@ for c in range(0, len(rev_change)):
         rev_decrease = rev_change[c]
 
     # total_rev is assigned an integer value of rev in list r
-    total_rev = int(rev[r])
+    total_rev = total_rev + int(rev[c])
 
     # Calculate the change in revenue (profit/loss). 
     # Use abs function for absolute difference.
