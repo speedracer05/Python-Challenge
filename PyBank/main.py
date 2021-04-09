@@ -46,7 +46,7 @@ for r in range(0, len(rev)-1): # <-1> subtract one row for the header
     # Note: manual validation for 1st calc (984655-867884 = 116771) checks 
     # out with print results.
     rev_change.append(int(rev[r+1]) - int(rev[r]))
-    # print(rev_change)
+    print(rev_change)
 
 # forLoop in the list rev_change, from zero to the end of items in rev_change
 for c in range(0, len(rev_change)):
@@ -63,8 +63,9 @@ for c in range(0, len(rev_change)):
     total_rev = total_rev + int(rev[c])
 
     # Calculate the change in revenue (profit/loss). 
-    # Use abs function for absolute difference.
-    sum_change = abs(rev_change[c])
+    # Use abs function for absolute difference; changes negative to positive value.
+   # sum_change = sum_change + abs(rev_change[c])
+sum_change = sum_change + (rev_change[c])
 
 # Calculate the avg change by taking the abolute value of change, divided by
 #  the number of items in rev_change, less one for the header.
@@ -75,7 +76,17 @@ print("")
 print("PyBank Financial Analysis")
 print("**************************")
 print("Total Months: " + str(len(date)))
-print("Total Revenue: " + "$" + str(total_rev) + "")
-print("Average Revenue Change $" + str(AvgChange))
+print("Total Revenue: $" + str(total_rev))
+print("Average Revenue Change: $" + str(AvgChange))
 print("Greatest Increase in Profit: " + date[rev_change.index(rev_gain)] + " ($" + str(rev_gain) + ")")
 print("Greatest Decrease in Profit: " + date[rev_change.index(rev_decrease)] + " ($" + str(rev_decrease) + ")")
+
+# Export text file with results of financial analysis 4-9-2021 12:12AM
+with open("Report_" + filename.split(",")[0] + ".txt","w", newline="") as text_file:
+    text_file.write("PyBank Financial Analysis" + "\n")
+    text_file.write("**************************" + "\n")
+    text_file.write("Total Months: " + str(len(date)) + "\n")
+    text_file.write("Total Revenue: $" + str(total_rev) + "\n")
+    text_file.write("Average Revenue Change: $" + str(AvgChange) + "\n")
+    text_file.write("Greatest Increase in Profit: " + date[rev_change.index(rev_gain)] + " ($" + str(rev_gain) + ")" + "\n")
+    text_file.write("Greatest Decrease in Profit: " + date[rev_change.index(rev_decrease)] + " ($" + str(rev_decrease) + ")")
