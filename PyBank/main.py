@@ -69,7 +69,7 @@ sum_change = sum_change + (rev_change[c])
 
 # Calculate the avg change by taking the abolute value of change, divided by
 #  the number of items in rev_change, less one for the header.
-AvgChange = int(sum_change/(len(rev_change)-1))
+AvgChange = int(sum_change / (len(rev_change)-2))
 
 # Analysis print via Terminal
 print("")
