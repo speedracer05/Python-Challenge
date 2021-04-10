@@ -7,9 +7,11 @@ The project involves the creation of a Python script to analyze the financial re
 * The greatest increase in profits (date and amount) over the entire period
 * The greatest decrease in losses (date and amount) over the entire period
 
+List and String variables were created. I then used two forLoops; one to calculate the change in revenue over the period, and using it to create a list; the other was used to find the greatest gain and decrease in revenue, as well as calculate the change in revenue.  
+
 ## Getting Started
 
-You will need to load the Python script main.py. A resource file named budget_data.csv was used to extract the data
+You will need to load the Python script main.py. into an editor. Visual Studio was used to create this script. A resource file named budget_data.csv was used to extract the data.
 
 The following output will be printed to the terminal:
 Total Months: 86
