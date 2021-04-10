@@ -1,60 +1,24 @@
 # Python-Challenge
 
-One Paragraph of project description goes here
+The project involves the creation of a Python script to analyze the financial records of your a fictiious company named PyBank. The task is to analyze the records from a csv file and calculate the following:
+* The total number of months included in the dataset
+* The net total amount of "Profit/Losses" over the entire period
+* Calculate the changes in "Profit/Losses" over the entire period, then find the average of those changes
+* The greatest increase in profits (date and amount) over the entire period
+* The greatest decrease in losses (date and amount) over the entire period
 
 ## Getting Started
 
-These instructions will get you a copy of the project up and running on your local machine for development and testing purposes. See deployment for notes on how to deploy the project on a live system.
+You will need to load the Python script main.py. A resource file named budget_data.csv was used to extract the data
 
-### Prerequisites
+The following output will be printed to the terminal:
+Total Months: 86
+Total Revenue: $38382578
+Average Revenue Change: $6269
+Greatest Increase in Profit: Feb-2012 ($1926159) 
+Greatest Decrease in Profit: Sep-2013 ($-2196167)
 
-What things you need to install the software and how to install them
-
-```
-Give examples
-```
-
-### Installing
-
-A step by step series of examples that tell you how to get a development env running
-
-Say what the step will be
-
-```
-Give the example
-```
-
-And repeat
-
-```
-until finished
-```
-
-End with an example of getting some data out of the system or using it for a little demo
-
-## Running the tests
-
-Explain how to run the automated tests for this system
-
-### Break down into end to end tests
-
-Explain what these tests test and why
-
-```
-Give an example
-```
-
-### And coding style tests
-
-Explain what these tests test and why
-
-```
-Give an example
-```
-
-## Deployment
-
-Add additional notes about how to deploy this on a live system
+In addition a text file of the same output is written to a file named, "Report_PyBank.txt"
 
 ## Built With
 
@@ -85,5 +49,5 @@ OS: Windows_NT x64 10.0.19042
 
 ## Acknowledgments
 
-* Inspiration
-* etc
+* Inspiration on how to write text file from https://careerkarma.com/blog/python-write-to-file/
+* Inspiration on how to add new line https://tinyurl.com/n5rd3dct
