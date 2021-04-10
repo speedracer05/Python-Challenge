@@ -63,13 +63,11 @@ for c in range(0, len(rev_change)):
     total_rev = total_rev + int(rev[c])
 
     # Calculate the change in revenue (profit/loss). 
-    # Use abs function for absolute difference; changes negative to positive value.
-   # sum_change = sum_change + abs(rev_change[c])
-sum_change = sum_change + (rev_change[c])
+    sum_change = sum_change + (rev_change[c])
 
 # Calculate the avg change by taking the abolute value of change, divided by
 #  the number of items in rev_change, less one for the header.
-AvgChange = int(sum_change / (len(rev_change)-2))
+AvgChange = int(sum_change / (len(rev_change)-1))
 
 # Analysis print via Terminal
 print("")
