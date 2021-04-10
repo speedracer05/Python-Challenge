@@ -43,8 +43,7 @@ with open(csvpath, newline='') as csvfile: # might need to add ''in place of...,
 # Calculate the change in revenue over the entire period, and write to the list[rev-change]
 for r in range(0, len(rev)-1): # <-1> subtract one row for the header
 
-    # Note: manual validation for 1st calc (984655-867884 = 116771) checks 
-    # out with print results.
+    # Perform calculation to find the revenue change, from row r=1 from r.
     rev_change.append(int(rev[r+1]) - int(rev[r]))
     # print(rev_change)
 
@@ -65,8 +64,7 @@ for c in range(0, len(rev_change)):
     # Calculate the change in revenue (profit/loss). 
     sum_change = sum_change + (rev_change[c])
 
-# Calculate the avg change by taking the abolute value of change, divided by
-#  the number of items in rev_change, less one for the header.
+# Calculate the avg change.
 AvgChange = int(sum_change / (len(rev_change)-1))
 
 # Analysis print via Terminal
