@@ -46,7 +46,7 @@ for r in range(0, len(rev)-1): # <-1> subtract one row for the header
     # Note: manual validation for 1st calc (984655-867884 = 116771) checks 
     # out with print results.
     rev_change.append(int(rev[r+1]) - int(rev[r]))
-    print(rev_change)
+    # print(rev_change)
 
 # forLoop in the list rev_change, from zero to the end of items in rev_change
 for c in range(0, len(rev_change)):
@@ -81,8 +81,8 @@ print("Average Revenue Change: $" + str(AvgChange))
 print("Greatest Increase in Profit: " + date[rev_change.index(rev_gain)] + " ($" + str(rev_gain) + ")")
 print("Greatest Decrease in Profit: " + date[rev_change.index(rev_decrease)] + " ($" + str(rev_decrease) + ")")
 
-# Export text file with results of financial analysis 4-9-2021 12:12AM
-with open("Report_" + filename.split(",")[0] + ".txt","w", newline="") as text_file:
+# Write text file with results of financial analysis 4-9-2021 12:12AM
+with open("Report_PyBank.txt", "w") as text_file:
     text_file.write("PyBank Financial Analysis" + "\n")
     text_file.write("**************************" + "\n")
     text_file.write("Total Months: " + str(len(date)) + "\n")
