@@ -12,28 +12,26 @@ import csv
 csvpath = os.path.join("Resources", "election_data.csv")
 
 # List of Variables
-Voter_Count = 0
+total_votes = []
+candidates_list = []
+unique_candidate = []
+percentage_votes = []
+
+# create empty counter
+count = 0
 
 
 # Open file using csv module
 with open(csvpath) as csvfile:
     csvreader = csv.reader(csvfile, delimiter=',')
-#    print(csvreader)
 
-        # Read the header row first (skip this step if there is now header)
-#    csv_header = next(csvreader)
-#    print(f"CSV Header: {csv_header}")
+# Read header row
+    csv_header = next(csvreader)
+    print(f"CSV Header: {csv_header}")
 
-    # Read each row of data after the header
-#    for row in csvreader:
-#        print(row)
-
-        # Exclude  header row
-    next(csvreader, None)
-
-    # Loop through data in the csv file
-    for row in csvreader:
-
-        # Count number of votes in column 0.
-        Voter_Count = 0 + 1
-        print('Number of voters:' + str(len(Voter_Count)))
+    # Direct csvreader to skip the header and count number of lines in csv file
+    if csv.Sniffer().has_header:
+        next(csvreader)
+    data = list(csvreader)
+    total_votes = len(data)
+print(f'There were a total of: {total_votes} votes')
