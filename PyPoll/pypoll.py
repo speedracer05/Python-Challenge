@@ -15,8 +15,10 @@ csvpath = os.path.join("Resources", "election_data.csv")
 # List of Variables
 total_votes = 0     # Set int value to zero
 candidate_list = [] # Set empty list for candidate
-count_vlist = []    # Set empyt list for voter count
+candidate_count = []
+count_vlist = []    # Set empty list for voter count
 election_file = ["election_data.csv"]
+highest_votes = 0   # Set int value to zero for winning votes
 
 # Set iteration through rows in election file
 for file in election_file:
@@ -39,7 +41,15 @@ for file in election_file:
                 pointer_candidate = count_vlist[vote_sum]
                 count_vlist[vote_sum] = vote_sum
 
-# print(total_votes)
-# print(candidate_list)
-# print(count_vlist)
+print(total_votes)
+print(candidate_list)
+print(count_vlist)
 print(str(total_votes))
+
+for candidate_name in candidate_list:
+    candidate_count.append((count_vlist.count(candidate_name))
+    print(count_vlist)
+# for candidate_name in candidate_list:
+#     votes = count_vlist[candidate_list.index(candidate_name)]
+#     # print(votes)
+#     vote_percent = (votes/total_votes)*100
