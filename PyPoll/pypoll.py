@@ -31,3 +31,4 @@ for file in election_file:
             candidate = row[2]
 
 print(total_votes)
+print(candidate)
