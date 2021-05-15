@@ -28,14 +28,18 @@ for file in election_file:
 # Iterate rows in csv, increment total votes list by 1 for each row
         for row in csvreader:
             total_votes = total_votes+1
-            candidate = row[2]
-# Populate candidate list with unique names, then increment vcount list by 1
-            if not candidate in candidate_list:
-                candidate_list.append(candidate)
+            candidate_name = row[2]
+# Populate candidate list with unique candidate names, then increment voter count list by 1
+            if not candidate_name in candidate_list:
+                candidate_list.append(candidate_name)
                 count_vlist.append(1)
-
+            
+            else:
+                vote_sum = candidate_list.index(candidate_name)
+                pointer_candidate = count_vlist[vote_sum]
+                count_vlist[vote_sum] = vote_sum
 
 # print(total_votes)
-# print(candidate)
-print(candidate_list)
-print(count_vlist)
+# print(candidate_list)
+# print(count_vlist)
+print(str(total_votes))
