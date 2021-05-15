@@ -26,8 +26,8 @@ for file in election_file:
     
 # Open file
     with open(csvpath, 'r') as file:
-        file.readline()
         csvreader = csv.reader(file, delimiter=',')
+        csv_header = next(csvreader)
 # Iterate rows in csv, increment total votes list by 1 for each row
         for row in csvreader:
             total_votes = total_votes+1
@@ -47,9 +47,9 @@ print(candidate_list)
 # print(count_vlist)
 # print(str(total_votes))
 
-for candidate_name in candidate_list:
-    candidate_count.append((total_votes.count(candidate_name))
-    percent.append(round(total_votes.count(candidate_name)/total_votes*100,3))
+# for candidate_name in candidate_list:
+#     candidate_count.append((total_votes.count(candidate_name))
+#     percent.append(round(total_votes.count(candidate_name)/total_votes*100,3))
 
 # for candidate_name in candidate_list:
 #     votes = count_vlist[candidate_list.index(candidate_name)]
