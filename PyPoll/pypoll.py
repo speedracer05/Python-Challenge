@@ -1,9 +1,10 @@
 # pypoll
-# The total number of votes cast
+# ! The total number of votes cast
 # A complete list of candidates who received votes
 # The percentage of votes each candidate won
 # The total number of votes each candidate won
 # The winner of the election based on popular vote.
+# Final script should both print the analysis to the terminal and export a text file
 
 import os
 import csv
@@ -11,27 +12,22 @@ import csv
 # Set path for file
 csvpath = os.path.join("Resources", "election_data.csv")
 
-# List of Variables
-total_votes = []
-candidates_list = []
-unique_candidate = []
-percentage_votes = []
+# Variables
+total_votes = 0     # Set int value to zero
+candidate_list = []
+count_vlist = []
+election_file = ["election_data.csv"]
 
-# create empty counter
-count = 0
+# Set iteration through rows in election file
+for file in election_file:
+    
+# Open file
+    with open(csvpath, 'r') as file:
+        file.readline()
+        csvreader = csv.reader(file, delimiter=',')
+# Iterate rows in csv, increment total votes list by 1 for each row
+        for row in csvreader:
+            total_votes = total_votes+1
+            candidate = row[2]
 
-
-# Open file using csv module
-with open(csvpath) as csvfile:
-    csvreader = csv.reader(csvfile, delimiter=',')
-
-# Read header row
-    csv_header = next(csvreader)
-    print(f"CSV Header: {csv_header}")
-
-    # Direct csvreader to skip the header and count number of lines in csv file
-    if csv.Sniffer().has_header:
-        next(csvreader)
-    data = list(csvreader)
-    total_votes = len(data)
-print(f'There were a total of: {total_votes} votes')
+print(total_votes)
