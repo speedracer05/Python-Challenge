@@ -29,11 +29,13 @@ for file in election_file:
         for row in csvreader:
             total_votes = total_votes+1
             candidate = row[2]
-# If candidate is not in candidate list, then increment candidate and vcount list by 1
-            if candidate is not in candidate_list:
+# Populate candidate list with unique names, then increment vcount list by 1
+            if not candidate in candidate_list:
                 candidate_list.append(candidate)
+                count_vlist.append(1)
 
 
 # print(total_votes)
 # print(candidate)
 print(candidate_list)
+print(count_vlist)
