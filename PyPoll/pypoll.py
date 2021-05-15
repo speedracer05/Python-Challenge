@@ -19,6 +19,7 @@ candidate_count = []
 count_vlist = []    # Set empty list for voter count
 election_file = ["election_data.csv"]
 highest_votes = 0   # Set int value to zero for winning votes
+percent = []
 
 # Set iteration through rows in election file
 for file in election_file:
@@ -36,19 +37,20 @@ for file in election_file:
                 candidate_list.append(candidate_name)
                 count_vlist.append(1)
             
-            else:
-                vote_sum = candidate_list.index(candidate_name)
-                pointer_candidate = count_vlist[vote_sum]
-                count_vlist[vote_sum] = vote_sum
+            # else:
+            #     vote_sum = candidate_list.index(candidate_name)
+            #     pointer_candidate = count_vlist[vote_sum]
+            #     count_vlist[vote_sum] = vote_sum
 
 print(total_votes)
 print(candidate_list)
-print(count_vlist)
-print(str(total_votes))
+# print(count_vlist)
+# print(str(total_votes))
 
 for candidate_name in candidate_list:
-    candidate_count.append((count_vlist.count(candidate_name))
-    print(count_vlist)
+    candidate_count.append((total_votes.count(candidate_name))
+    percent.append(round(total_votes.count(candidate_name)/total_votes*100,3))
+
 # for candidate_name in candidate_list:
 #     votes = count_vlist[candidate_list.index(candidate_name)]
 #     # print(votes)
