@@ -36,21 +36,26 @@ for file in election_file:
                 candidate_list.append(candidate_name)
                 candidate_count[candidate_name] = 0
             candidate_count[candidate_name] += 1
+            # percent.append(int(candidate_count/int(total_votes)* 100
+                #     candidate_name)/total_votes*100,3))
 
 
 
 print()
 print(candidate_list)
-print(candidate_count)
+
 
 
 outputpath = os.path.join('Analysis','Results.txt')
 
-resultsfile = open(outputpath, 'w')
 
 # Election Results
 print('')
 print('PyPoll Election Analysis')
 print('-'*26)
 print(f'Total Votes: {total_votes}')
+print('-'*26)
+# for row in range(len(candidate_list)):
+#     print(f'{candidate_list[row]}: {percent[row]}% {candidate_count[row]}')
+print(candidate_count)
 print('-'*26)
