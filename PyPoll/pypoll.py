@@ -4,7 +4,7 @@
 # The percentage of votes each candidate won
 # ! The total number of votes each candidate won
 # ! The winner of the election based on popular vote.
-# Final script should both print the analysis to the terminal and export a text file
+# ! Final script should both print the analysis to the terminal and export a text file
 
 import os
 import csv
@@ -42,7 +42,7 @@ for file in election_file:
             )
         winner = max(candidate_count, key=candidate_count.get)
 
-print(winner)
+print(candidate_results)
 
 outputpath = os.path.join('Analysis','Results.txt')
 resultsfile = open(outputpath, "w")
