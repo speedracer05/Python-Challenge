@@ -3,7 +3,7 @@
 # ! A complete list of candidates who received votes
 # The percentage of votes each candidate won
 # ! The total number of votes each candidate won
-# The winner of the election based on popular vote.
+# ! The winner of the election based on popular vote.
 # Final script should both print the analysis to the terminal and export a text file
 
 import os
@@ -18,8 +18,7 @@ total_votes = 0
 candidate_list = []
 candidate_count = {}
 election_file = ['election_data.csv']
-highest_votes = 0   # Set int value to zero for winning votes
-# percent = []
+percent = []
 
 # Iterate through rows in election file
 for file in election_file:
@@ -50,7 +49,7 @@ outputpath = os.path.join('Analysis','Results.txt')
 
 # Election Results
 print('')
-print('PyPoll Election Analysis')
+print('Election Results')
 print('-'*26)
 print(f'Total Votes: {total_votes}')
 print('-'*26)
@@ -59,5 +58,5 @@ print('-'*26)
 #             )
 [print(row,': ', value) for row, value in candidate_count.items()]
 print('-'*26)
-# print(f'Winner: {winner}')
+print(f'Winner: {winner}')
 print('-'*26)
