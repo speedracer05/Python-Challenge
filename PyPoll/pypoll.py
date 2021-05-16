@@ -22,27 +22,23 @@ percent = []
 
 # Iterate through rows in election file
 for file in election_file:
-    
-    # Open file
     with open(csvpath, 'r') as file:
         csvreader = csv.reader(file, delimiter=',')
         csv_header = next(csvreader)
-        # Iterate rows, increment total votes list by 1 & get candidate name
+        # Iterate rows, increment total votes & get candidate name
         for row in csvreader:
             total_votes = total_votes+1
             candidate_name = row[2] 
-            # Add unique candidate names, and increment voter count list by 1
+            # Add unique candidate name & increment voter count
             if candidate_name not in candidate_list:
                 candidate_list.append(candidate_name)
                 candidate_count[candidate_name] = 0
             candidate_count[candidate_name] += 1
-            # percent.append(int(candidate_count/int(total_votes)* 100
-                #     candidate_name)/total_votes*100,3))
+        for candidate_name in candidate_count:
+            votes = candidate_count[candidate_name]
+            percent = int(votes)/int(total_votes)*100                
 
-
-
-print()
-print(candidate_list)
+print(candidate_results)
 
 
 
@@ -55,7 +51,10 @@ print('PyPoll Election Analysis')
 print('-'*26)
 print(f'Total Votes: {total_votes}')
 print('-'*26)
+for row in range(len(candidate_list)):
+    print(f'{candidate_name[row]}: {percent[row]}% {votes[row]})\n'
+            )
 # for row in range(len(candidate_list)):
 #     print(f'{candidate_list[row]}: {percent[row]}% {candidate_count[row]}')
-print(candidate_count)
+# print(candidate_count)
 print('-'*26)
