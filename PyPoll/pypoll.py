@@ -41,9 +41,9 @@ for file in election_file:
             candidate_results = (
                 f'{candidate_name}: {percent:.1f}% ({votes:,})\n'
             )
-        # winner = candidate_list[candidate_count.index(max(candidate_count))]
+        winner = max(candidate_count, key=candidate_count.get)
 
-print(candidate_results)
+print(winner)
 
 outputpath = os.path.join('Analysis','Results.txt')
 
@@ -58,4 +58,6 @@ print('-'*26)
 #     print(f'{candidate_name[row]}: {percent[row]}% {votes[row]})\n'
 #             )
 [print(row,': ', value) for row, value in candidate_count.items()]
+print('-'*26)
+# print(f'Winner: {winner}')
 print('-'*26)
