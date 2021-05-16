@@ -15,6 +15,7 @@ csvpath = os.path.join('Resources', 'election_data.csv')
 
 # List of Variables
 total_votes = 0
+votes = []
 candidate_list = []
 candidate_count = {}
 election_file = ['election_data.csv']
@@ -34,15 +35,17 @@ for file in election_file:
                 candidate_list.append(candidate_name)
                 candidate_count[candidate_name] = 0
             candidate_count[candidate_name] += 1
+            votes.append(row[2])
         for candidate_name in candidate_count:
-            votes = candidate_count[candidate_name]
-            percent = int(votes)/int(total_votes)*100
+            percent.append(round(votes.count(candidate_name)/total_votes*100,3))
+            # votes = candidate_count[candidate_name]
+            # percent = int(votes)/int(total_votes)*100
             candidate_results = (
-                f'{candidate_name}: {percent:.1f}% ({votes:,})\n'
+                f'{candidate_name}: {percent}% ({votes:})'
             )
         winner = max(candidate_count, key=candidate_count.get)
 
-print(candidate_results)
+# print(candidate_results)   # need to figure out to append percent and associate it with index2
 
 outputpath = os.path.join('Analysis','Results.txt')
 resultsfile = open(outputpath, "w")
@@ -53,9 +56,9 @@ print('Election Results')
 print('-'*26)
 print(f'Total Votes: {total_votes}')
 print('-'*26)
-# for row in range(len(candidate_list)):
-#     print(f'{candidate_name[row]}: {percent[row]}% {votes[row]})\n'
-#             )
+for row in range(len(candidate_list)):
+    print(f'{candidate_list[row]}: {percent[row]}% {votes[row]}')
+print('-'*26)
 [print(row,': ', value) for row, value in candidate_count.items()]
 print('-'*26)
 print(f'Winner: {winner}')
