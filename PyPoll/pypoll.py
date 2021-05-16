@@ -45,7 +45,7 @@ for file in election_file:
 print(winner)
 
 outputpath = os.path.join('Analysis','Results.txt')
-
+resultsfile = open(outputpath, "w")
 
 # Election Results
 print('')
