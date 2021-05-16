@@ -57,7 +57,5 @@ print('-'*26)
 # for row in range(len(candidate_list)):
 #     print(f'{candidate_name[row]}: {percent[row]}% {votes[row]})\n'
 #             )
-# for row in range(len(candidate_list)):
-#     print(f'{candidate_list[row]}: {percent[row]}% {candidate_count[row]}')
-print(candidate_count)
+[print(row,': ', value) for row, value in candidate_count.items()]
 print('-'*26)
