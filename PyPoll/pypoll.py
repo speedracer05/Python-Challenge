@@ -1,7 +1,7 @@
 import os
 import csv
 
-# Set path for file & declare var
+# Set path for csv & declare var
 csvpath = os.path.join('Resources', 'election_data.csv')
 total_votes = 0
 votes = []
@@ -11,6 +11,8 @@ candidate_tally = []
 election_file = ['election_data.csv']
 percent = []
 
+# Get vote total, unique candidates, increment vote for ea candidate,
+# calculate vote tally & percent, and determine winner
 for file in election_file:
     with open(csvpath, 'r') as file:
         csvreader = csv.reader(file, delimiter=',')
@@ -29,15 +31,20 @@ for file in election_file:
         winner = max(candidate_count, key=candidate_count.get)
 
 outputpath = os.path.join('Analysis','Results.txt')
-resultsfile = open(outputpath, 'w')
+results = open(outputpath, 'w')
 
-print('')
-print('Election Results')
-print('-'*26)
-print(f'Total Votes: {total_votes}')
-print('-'*26)
-[print(f'{candidate_list[row]}: {percent[row]}% ({candidate_tally[row]})')
-for row in range(len(candidate_list))]
-print('-'*26)
-print(f'Winner: {winner}')
-print('-'*26)
+export = []
+export.append('Election Results')
+export.append('-'*26)
+export.append(f'Total Votes: {total_votes}')
+export.append('-'*26)
+[export.append(f'{candidate_list[row]}: {percent[row]}% ({candidate_tally[row]})')
+for row in range(len(candidate_list))
+]
+export.append('-'*26)
+export.append(f'Winner: {winner}')
+export.append('-'*26)
+for line in export:
+    print(line)
+    print(line,file=results)
+results.close()
