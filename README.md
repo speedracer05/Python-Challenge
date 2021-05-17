@@ -29,7 +29,7 @@ You will need to load the Python script .py. into an editor. Visual Studio was u
 PYBANK
 The following output will be printed to the terminal and written to a text file.
 
-####Financial Analysis
+###### Financial Analysis
 ----------------------------
 Total Months: 86
 Total: $38382578
@@ -40,7 +40,7 @@ Greatest Decrease in Profits: Sep-2013 ($-2196167)
 PYPOLL
 The following output will be printed to the terminal and written to a text file.
 
-####lection Results
+###### Election Results
 -------------------------
 Total Votes: 3521001
 -------------------------
