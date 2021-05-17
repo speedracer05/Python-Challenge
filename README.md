@@ -41,6 +41,7 @@ The following output will be printed to the terminal and written to a text file.
 
 ###### Election Results
 Total Votes: 3521001
+Total Votes: 3521001
 Khan: 63.000% (2218231)
 Correy: 20.000% (704200)
 Li: 14.000% (492940)
