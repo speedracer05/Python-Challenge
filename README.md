@@ -54,13 +54,13 @@ The following output will be printed to the terminal and written to a text file.
 ## Built With
 
 * Visual Studio Code Version: 1.55.0 (user setup)
-Commit: c185983a683d14c396952dd432459097bc7f757f
-Date: 2021-03-30T16:01:55.261Z
-Electron: 11.3.0
-Chrome: 87.0.4280.141
-Node.js: 12.18.3
-V8: 8.7.220.31-electron.0
-OS: Windows_NT x64 10.0.19042
+* Commit: c185983a683d14c396952dd432459097bc7f757f
+* Date: 2021-03-30T16:01:55.261Z
+* Electron: 11.3.0
+* Chrome: 87.0.4280.141
+* Node.js: 12.18.3
+* V8: 8.7.220.31-electron.0
+* OS: Windows_NT x64 10.0.19042
 * Visual Studio Code 1.56.2
 
 ## Authors
