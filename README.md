@@ -28,13 +28,6 @@ You will need to load the Python script .py. into an editor. Visual Studio was u
 
 PYBANK
 The following output will be printed to the terminal and written to a text file.
-
-<ul>
-<li>Fish</li>
-<li>Eggs</li>
-<li>Cheese</li>
-</ul>
-
 ###### Financial Analysis
 <ul>
 <li>Total Months: 86</li>
@@ -46,7 +39,6 @@ The following output will be printed to the terminal and written to a text file.
 
 PYPOLL
 The following output will be printed to the terminal and written to a text file.
-
 ###### Election Results
 <ul>
 <li>Total Votes: 3521001</li>
