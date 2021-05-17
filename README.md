@@ -2,7 +2,7 @@
 
 This repository is an assignment from UC Davis's Data Analytics bootcamp. There are two separate projects, Pybank and PyPoll, which simulate real-world situation where Python scripting skills may be used. Both contain a .py file that are used to run each analysis. The purpose of the excercise is put our Python scripting skills to work. Analysis was conducted using Visual Studio.
 
-## Table of contents
+## Table of Contents
 * [General info](#general-info)
 * [Technologies](#technologies)
 * [Setup](#setup)
@@ -51,17 +51,14 @@ The following output will be printed to the terminal and written to a text file.
 </ul>
 
 
-## Built With
+## Set Up
 
 * Visual Studio Code Version: 1.55.0 (user setup)
-* Commit: c185983a683d14c396952dd432459097bc7f757f
-* Date: 2021-03-30T16:01:55.261Z
 * Electron: 11.3.0
 * Chrome: 87.0.4280.141
 * Node.js: 12.18.3
 * V8: 8.7.220.31-electron.0
 * OS: Windows_NT x64 10.0.19042
-* Visual Studio Code 1.56.2
 
 ## Authors
 
