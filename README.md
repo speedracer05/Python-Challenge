@@ -29,6 +29,9 @@ You will need to load the Python script .py. into an editor. Visual Studio was u
 PYBANK
 The following output will be printed to the terminal and written to a text file.
 
+Total Months: 86
+Total: $38382578
+
 ###### Financial Analysis
 Total Months: 86
 Total: $38382578
