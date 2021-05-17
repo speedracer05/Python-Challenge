@@ -30,7 +30,6 @@ PYBANK
 The following output will be printed to the terminal and written to a text file.
 
 ###### Financial Analysis
-----------------------------
 Total Months: 86
 Total: $38382578
 Average  Change: $-2315.12
@@ -41,14 +40,11 @@ PYPOLL
 The following output will be printed to the terminal and written to a text file.
 
 ###### Election Results
--------------------------
 Total Votes: 3521001
--------------------------
 Khan: 63.000% (2218231)
 Correy: 20.000% (704200)
 Li: 14.000% (492940)
 O'Tooley: 3.000% (105630)
--------------------------
 Winner: Khan
 
 
