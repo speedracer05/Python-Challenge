@@ -18,6 +18,7 @@ total_votes = 0
 votes = []
 candidate_list = []
 candidate_count = {}
+candidate_tally = []  # tester
 election_file = ['election_data.csv']
 percent = []
 
@@ -34,18 +35,24 @@ for file in election_file:
             if candidate_name not in candidate_list:
                 candidate_list.append(candidate_name)
                 candidate_count[candidate_name] = 0
-            candidate_count[candidate_name] += 1
+            candidate_count[candidate_name] += 11
             votes.append(row[2])
+            
+            # print(votes)
         for candidate_name in candidate_count:
             percent.append(round(votes.count(candidate_name)/total_votes*100,3))
+            candidate_tally.append(votes.count(candidate_name))
+            # candidate_count[candidate_name] = 0
             # votes = candidate_count[candidate_name]
             # percent = int(votes)/int(total_votes)*100
-            candidate_results = (
-                f'{candidate_name}: {percent}% ({votes:})'
-            )
+            # candidate_count[candidate_name] += 1
+            # candidate_results = (
+            #     f'{candidate_name}: {percent}% ({votes:})'
+            # )
         winner = max(candidate_count, key=candidate_count.get)
 
-# print(candidate_results)   # need to figure out to append percent and associate it with index2
+print(candidate_tally)   # need to figure out to append percent and associate it with index2
+
 
 outputpath = os.path.join('Analysis','Results.txt')
 resultsfile = open(outputpath, "w")
@@ -57,9 +64,9 @@ print('-'*26)
 print(f'Total Votes: {total_votes}')
 print('-'*26)
 for row in range(len(candidate_list)):
-    print(f'{candidate_list[row]}: {percent[row]}% {votes[row]}')
+    print(f'{candidate_list[row]}: {percent[row]}% ({candidate_tally[row]})')
 print('-'*26)
-[print(row,': ', value) for row, value in candidate_count.items()]
-print('-'*26)
+# [print(row,': ', value) for row, value in candidate_count.items()]
+# print('-'*26)
 print(f'Winner: {winner}')
 print('-'*26)
