@@ -47,7 +47,7 @@ import os
 import csv
 ``` 
 
-## Set Up
+## Setup
 
 * Visual Studio Code Version: 1.55.0 (user setup)
 * Electron: 11.3.0
