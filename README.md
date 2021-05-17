@@ -12,17 +12,7 @@ This repository is an assignment from UC Davis's Data Analytics bootcamp. There 
 ## General Information
 Examine PyBank csv file and determine total months covered in the data, total profit, average change, greatest increase and decrease.
 
-For PyPoll, determine the total votes, votes received by each candidate, percent of votes and vote tally for each respective candidate
-
-
-## Technologies
-```python
-# Dependencies & Setup
-import os
-import csv
-``` 
-
-## Getting Started
+For PyPoll, determine the total votes, votes received by each candidate, percent of votes and vote tally for each respective candidate.
 
 You will need to load the Python script .py. into an editor. Visual Studio was used to create this script. 
 
@@ -50,6 +40,12 @@ The following output will be printed to the terminal and written to a text file.
 <li>Winner: Khan</li>
 </ul>
 
+## Technologies
+```python
+# Dependencies & Setup
+import os
+import csv
+``` 
 
 ## Set Up
 
