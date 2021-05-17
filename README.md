@@ -29,11 +29,11 @@ You will need to load the Python script .py. into an editor. Visual Studio was u
 PYBANK
 The following output will be printed to the terminal and written to a text file.
 
-<ol>
+<ul>
 <li>Fish</li>
 <li>Eggs</li>
 <li>Cheese</li>
-</ol>
+</ul>
 
 ###### Financial Analysis
 Total Months: 86
